@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Layout>
+    <Layout style="height:100vh;">
       <Sider breakpoint="md" collapsible :collapsed-width="78" v-model="isCollapsed">
           <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
               <menu-item name="1-1">
