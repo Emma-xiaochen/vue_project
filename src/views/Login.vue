@@ -58,7 +58,7 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   html {
     height: 100%;
   }
@@ -72,16 +72,16 @@
   }
 
   @keyframes bganimation {
-      0%{
-        background-image: -webkit-linear-gradient(top,white,LightSteelBlue,MediumSlateBlue);
-      }
-      50%{
-        background-image: -webkit-linear-gradient(top,white,Thistle,BlueViolet);
-      }
-      100%{
-        background-image: -webkit-linear-gradient(top,white,Thistle,plum);
-      }
+    0%{
+      background-image: -webkit-linear-gradient(top,white,LightSteelBlue,MediumSlateBlue);
     }
+    50%{
+      background-image: -webkit-linear-gradient(top,white,Thistle,BlueViolet);
+    }
+    100%{
+      background-image: -webkit-linear-gradient(top,white,Thistle,plum);
+    }
+  }
 
   #login {
     width: 350px;
