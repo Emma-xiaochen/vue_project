@@ -1,22 +1,26 @@
 <template>
   <div id="login">
-    <div class="title">登录</div>
-    <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
-      <FormItem prop="user">
-        <Input type="text" v-model="formInline.user" placeholder="用户名">
-        <Icon type="ios-person-outline" slot="prepend"></Icon>
-        </Input>
-      </FormItem>
-      <FormItem prop="password">
-        <Input type="password" v-model="formInline.password" placeholder="密码">
-        <Icon type="ios-lock-outline" slot="prepend"></Icon>
-        </Input>
-      </FormItem>
-      <FormItem>
-        <a class="forget" href="#">忘记密码?</a>
-        <Button class="submitBtn" type="dashed" @click="handleSubmit('formInline')">登录</Button>
-      </FormItem>
-    </Form>
+    <div class="container">
+      <div class="login-web">
+       <div class="title">登录</div>
+        <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
+          <FormItem prop="user">
+            <Input type="text" v-model="formInline.user" placeholder="用户名">
+            <Icon type="ios-person-outline" slot="prepend"></Icon>
+            </Input>
+          </FormItem>
+          <FormItem prop="password">
+            <Input type="password" v-model="formInline.password" placeholder="密码">
+            <Icon type="ios-lock-outline" slot="prepend"></Icon>
+            </Input>
+          </FormItem>
+          <FormItem>
+            <a class="forget" href="#">忘记密码?</a>
+            <Button class="submitBtn" type="dashed" @click="handleSubmit('formInline')">登录</Button>
+          </FormItem>
+        </Form>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,19 +62,18 @@
   }
 </script>
 
-<style lang="less">
-  html {
-    height: 100%;
+<style lang="less" scoped>
+  #login {
+    height: 100vh;
   }
-
-  body {
+  
+  .container {
     background-repeat: repeat-x;
     background-size: 400%;
-    height: 80%;
+    height: 100vh;
     animation: bganimation 15s infinite;
     position: relative;
   }
-
   @keyframes bganimation {
     0%{
       background-image: -webkit-linear-gradient(top,white,LightSteelBlue,MediumSlateBlue);
@@ -83,7 +86,7 @@
     }
   }
 
-  #login {
+  .login-web {
     width: 350px;
     height: 290px;
     background: rgba(0, 0, 0, .3);
@@ -101,7 +104,7 @@
       margin-bottom: 25px;
     }
 
-    .ivu-input-group .ivu-input {
+    /deep/ .ivu-input-group .ivu-input {
       width: 275px;
     }
 
