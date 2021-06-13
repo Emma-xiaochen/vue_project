@@ -1,7 +1,6 @@
 <template>
   <div id="login">
     <div class="container">
-      <div class="login-web">
        <div class="title">登录</div>
         <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
           <FormItem prop="user">
@@ -19,7 +18,6 @@
             <Button class="submitBtn" type="dashed" @click="handleSubmit('formInline')">登录</Button>
           </FormItem>
         </Form>
-      </div>
     </div>
   </div>
 </template>
@@ -63,11 +61,11 @@
 </script>
 
 <style lang="less" scoped>
-  #login {
-    height: 100vh;
-  }
+  // #login {
+  //   height: 100vh;
+  // }
   
-  .container {
+  #login {
     background-repeat: repeat-x;
     background-size: 400%;
     height: 100vh;
@@ -86,7 +84,7 @@
     }
   }
 
-  .login-web {
+  .container {
     width: 350px;
     height: 290px;
     background: rgba(0, 0, 0, .3);
