@@ -44,8 +44,9 @@
     },
     methods: {
       handleSubmit(name) {
+        
         this.$refs[name].validate((valid) => {
-          if (valid) {
+          if (this.formInline.user === '13652384768' && this.formInline.password === '123456') {
             // 验证通过
             this.$Message.success('登录成功!');
             // 跳转到首页
